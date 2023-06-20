@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> BATCH-1 LECTURE-64 ACCESS FORM ELEMENT BY JAVASCRIPT</title>
+        <style>
+
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return submitForm()">
+            <input id="n1" type="text" name="num1" placeholder="Enter the value1">
+            <!--<input id="n2" type="text" name="num2" placeholder="Enter the value2">-->
+            <input data-n2="n2" type="text" name="num2" placeholder="Enter the value2">
+            <input data-n2="n3" type="text" name="num3" placeholder="Enter the value3">
+
+            <input type="Submit" value="Submit">
+        </form>
+        <br>
+        <br>
+        <hr>
+        <form>
+            <input type="text" placeholder="Enter the value">
+
+            <button type="submit">Submit</button>
+        </form>
+
+
+        <script>
+            // always load js at the the bottom to apper your website is loading fast
+            // Function Defination
+            function submitForm(){
+                // Function body
+                let number1=document.getElementById('n1').value
+                //var number2=document.getElementById('n2').value
+                // var number2=document.getElementById('[data-n2=n2]').value
+                // var number2=document.querySelector('[attribute="value"]')
+                 var number2=document.querySelector('[data-n2="n2"]').value;
+                alert('ok '+number1);
+                alert('ok '+number2);
+                alert (parseInt(number1)+parseInt (number2));
+
+                let result= parseInt(number) + parseInt(number2);
+                alert(result);
+
+                // Now save this result in local storage so that we can access
+                //object.method();
+                localStorage.setItem('result',result) // we are passing two actual arguement are string arguement
+
+                // Function may return something
+                return false;
+            }
+        </script>
+    </body>
+</html>                     
