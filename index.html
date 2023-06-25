@@ -12,7 +12,7 @@
         </script>
     </head>
     <body>
-        <form onsubmit="return submitForm()">
+        <form onsubmit=" submitForm()">
             <input id="n1" type="text" name="num1" placeholder="Enter the value1">
             <!--<input id="n2" type="text" name="num2" placeholder="Enter the value2">-->
             <input data-n2="n2" type="text" name="num2" placeholder="Enter the value2">
@@ -46,10 +46,6 @@
 
                 let result= parseInt(number) + parseInt(number2);
                 alert(result);
-
-                // Now save this result in local storage so that we can access
-                //object.method();
-                localStorage.setItem('result',result) // we are passing two actual arguement are string arguement
 
                 // Function may return something
                 return false;
